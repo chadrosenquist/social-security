@@ -7,11 +7,12 @@ TIER_1_MAX = 84936.0
 TIER_2_RATE = 0.15
 TIER_2_MAX = 168600.0
 
+
 def benefit_at_67(salary: float):
     """
     https://www.ssa.gov/oact/cola/piaformula.html
-    :param salary:
-    :return:
+    :param salary: Salary
+    :return: Benefits at age 67
     """
     if salary > TIER_2_MAX:
         raise ValueError(f'Salary of {salary} exceeds maximum of {TIER_2_MAX}')
